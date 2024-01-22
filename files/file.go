@@ -1,24 +1,22 @@
 package file
 
 import (
-	"log"
 	"os"
 )
 
 
 
 
-func ReadFile(filename string)[]byte {
+func ReadFile(filename string)([]byte, error ){
 
 	fileByte, err := os.ReadFile(filename)
 
-	if err != nil {
-		log.Fatal(err)
-	}
-	return fileByte
+	return fileByte, err
 }
 
 
 // This function is to read a file in chunks rather than all at once
 
-func ReadFileChun(filename string)
+func ReadFileChun(filename string){
+	// read file in chunks
+}
